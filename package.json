@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "bvi": "^1.0.2",
     "maska": "^3.1.0",
     "sass-embedded": "^1.85.1",
     "swiper": "^11.2.5",
