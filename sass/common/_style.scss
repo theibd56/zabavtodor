@@ -200,6 +200,11 @@ p, li {
   }
 }
 
+body .bvi-body a.bvi-link {
+  right: inherit !important;
+  left: 1.5rem !important;
+}
+
 li {
   margin: 0;
 }
