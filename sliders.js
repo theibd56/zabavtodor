@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 document.addEventListener("DOMContentLoaded", function () {
-    const mainSlider = new Swiper('#js-main-slider', {
+    const mainSlider = new Swiper('.js-main-slider .swiper', {
         slidesPerView: 1,
         spaceBetween: 20,
         speed: 600,
@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplay: {
             delay: 10000,
         },
-        pagination: {
-            el: '#js-main-slider .swiper-pagination',
-            clickable: true,
+        navigation: {
+            prevEl: '.js-main-slider .prev',
+            nextEl: '.js-main-slider .next'
         }
     });
 });
