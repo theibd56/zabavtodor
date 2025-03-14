@@ -1,0 +1,268 @@
+@use 'variables';
+
+.swiper-pagination {
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #C5C5C5;
+    transition: all .3s ease;
+    margin: 0 !important;
+
+    &-active {
+      background: #0F0F0F;
+    }
+  }
+}
+
+.js-swiper-index {
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+// Обнуление стилей
+
+* {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+a:hover {
+  color: var(--akcent-1);
+  border-color: var(--akcent-1);
+}
+
+svg, path {
+  transition: all .3s ease;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: #fff;
+  font-family: var(--font-family);
+  cursor: default;
+}
+
+main {
+  overflow: hidden;
+  min-height: 50vh;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  //width: 100%;
+  padding: 0 15px;
+}
+
+h1 {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: var(--font-family);
+  line-height: 1.2;
+}
+
+h3 {
+  color: #FFF;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 700;
+
+  padding: 8px 25px;
+  line-height: 1.2;
+
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+h4 {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+h5 {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+p, li {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+li {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  p {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+  p, li {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+}
