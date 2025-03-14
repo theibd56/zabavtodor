@@ -16,20 +16,22 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("js-header-bvi").addEventListener("click", function () {
-        if (typeof isvek !== "undefined" && typeof isvek.Bvi === "function") {
-            new isvek.Bvi({
-                target: "body",
-                theme: "white",
-                font: "arial",
-                letterSpacing: "normal",
-                lineHeight: "normal",
-                images: true,
-                reload: false
-            });
-            console.log("BVI успешно запущен!");
-        } else {
-            console.error("Ошибка: isvek.Bvi не найден. Проверьте подключение скрипта.");
-        }
-    });
+    document.querySelectorAll('.js-body-bvi').forEach(item => {
+        item.addEventListener("click", function () {
+            if (typeof isvek !== "undefined" && typeof isvek.Bvi === "function") {
+                new isvek.Bvi({
+                    target: "body",
+                    theme: "white",
+                    font: "arial",
+                    letterSpacing: "normal",
+                    lineHeight: "normal",
+                    images: true,
+                    reload: false
+                });
+                console.log("BVI успешно запущен!");
+            } else {
+                console.error("Ошибка: isvek.Bvi не найден. Проверьте подключение скрипта.");
+            }
+        });
+    })
 });
