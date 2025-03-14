@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 10000,
         },
         pagination: {
-            el: '.js-promo-slider .swiper-pagination',
+            el: '#js-main-slider .swiper-pagination',
             clickable: true,
         }
     });
