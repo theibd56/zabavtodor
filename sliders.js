@@ -15,4 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
             nextEl: '.js-main-slider .next'
         }
     });
+
+    const resourcesSlider = new Swiper('.js-resources-slider .swiper', {
+        slidesPerView: 4,
+        spaceBetween: 15,
+        speed: 600,
+        loop: true,
+        autoplay: {
+            delay: 10000,
+        },
+        navigation: {
+            prevEl: '.js-resources-slider .prev',
+            nextEl: '.js-resources-slider .next'
+        }
+    });
 });
