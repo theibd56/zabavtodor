@@ -187,6 +187,17 @@ h5 {
   line-height: 1.2;
 }
 
+ul {
+  padding-left: 30px;
+}
+
+p + ul {
+  margin-top: 0;
+}
+p:has(+ ul) {
+  margin-bottom: 0;
+}
+
 p, li {
   color: #000;
   font-family: var(--font-family);
