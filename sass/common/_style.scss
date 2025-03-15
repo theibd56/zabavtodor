@@ -143,6 +143,7 @@ h1 {
   font-family: var(--font-family);
   font-size: 42px;
   font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
@@ -207,6 +208,17 @@ p, li {
   margin-bottom: 15px;
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+p {
+  a {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    margin: 0;
   }
 }
 

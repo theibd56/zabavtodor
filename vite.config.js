@@ -8,6 +8,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 newsIndex: resolve(__dirname, '/pages/_newsIndex.html'),
+                newsShow: resolve(__dirname, '/pages/_newsShow.html'),
             },
         },
     },
