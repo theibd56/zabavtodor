@@ -1,0 +1,32 @@
+.breadcrumbs {
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    margin: 30px 0 50px;
+  }
+  &-item:not(:last-child) {
+    display: flex;
+    align-items: center;
+    &:after {
+      content: "";
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5px;
+      height: 5px;
+      border-bottom: 0.5px solid  #000;
+      border-right: 0.5px solid  #000;
+      margin: 0 10px;
+
+      transform: rotate(-45deg);
+    }
+  }
+  &-item, &-item a {
+    color: #000;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

@@ -4,5 +4,7 @@
 @use 'blocks/multimedia';
 @use 'blocks/news';
 @use 'blocks/resources';
-
 @use 'blocks/footer';
+
+@use 'blocks/breadcrumbs';
+@use 'blocks/pagger';

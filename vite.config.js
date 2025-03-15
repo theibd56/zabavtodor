@@ -7,6 +7,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
+                newsIndex: resolve(__dirname, '/pages/_newsIndex.html'),
             },
         },
     },
