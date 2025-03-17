@@ -175,6 +175,7 @@ h4 {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
+  margin-top: 0;
   margin-bottom: 15px;
 }
 
@@ -183,18 +184,19 @@ h5 {
   font-family: var(--font-family);
   font-size: 20px;
   font-weight: 500;
+  margin-top: 0;
   margin-bottom: 10px;
   line-height: 1.2;
 }
 
-ul {
+ul, ol {
   padding-left: 30px;
 }
 
-p + ul {
+p + ul, p + ol {
   margin-top: 0;
 }
-p:has(+ ul) {
+p:has(+ ul), p:has(+ ol) {
   margin-bottom: 0;
 }
 
