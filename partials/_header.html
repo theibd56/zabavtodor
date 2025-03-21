@@ -8,7 +8,7 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.3549C13.806 15.3549 17.289 12.6169 19.25 8.0529C17.289 3.4889 13.806 0.7509 9.998 0.7509H10.002C6.194 0.7509 2.711 3.4889 0.75 8.0529C2.711 12.6169 6.194 15.3549 10.002 15.3549H9.998Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
-				<div class="header-burger" id="js-header-trigger">
+				<div class="header-burger" id="js-burger-trigger">
 					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
 						<line y1="1" x2="19" y2="1" stroke="white" stroke-width="2"/>
 						<line y1="7" x2="19" y2="7" stroke="white" stroke-width="2"/>
@@ -109,3 +109,105 @@
 
 
 </header>
+
+<section class="burger" id="js-burger-menu" style="display: none">
+	<div class="burger-container container">
+		<div class="burger-close" id="js-burger-close">
+
+		</div>
+		<div class="burger-content">
+			<div class="footer-left">
+				<div class="footer-logos">
+					<a href="#">
+						<img src="/logo.svg" alt="">
+					</a>
+					<a href="#">
+						<img src="/logo-2-reverse.svg" alt="">
+					</a>
+					<div class="footer-title">
+						Государственное казенное учреждение "Управление автомобильных дорог Забайкальского края"
+						<span>(ГКУ ЗАБАВТОДОР)</span>
+					</div>
+				</div>
+				<ul class="footer-menu">
+					<li>
+						<a href="#">Деятельность</a>
+					</li>
+					<li>
+						<a href="#">Структура</a>
+					</li>
+					<li class="has-child">
+						<a href="#">Документы</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#">
+									Федеральный закон об автомобильных дорогах
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Приказы
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Распоряжения
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-descr">
+						<a href="#">
+							Приемная
+							<span>(обращения граждан)</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">Новости</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-right">
+				<div class="footer-bvi js-body-bvi">
+					<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2489 12.0531C16.2489 13.7991 14.7313 15.2141 12.8601 15.2141C10.9889 15.2141 9.47241 13.7991 9.47241 12.0531C9.47241 10.3061 10.9889 8.89111 12.8601 8.89111C14.7313 8.89111 16.2489 10.3061 16.2489 12.0531Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8585 19.355C16.9396 19.355 20.6723 16.617 22.774 12.053C20.6723 7.48898 16.9396 4.75098 12.8585 4.75098H12.8628C8.78167 4.75098 5.0489 7.48898 2.94727 12.053C5.0489 16.617 8.78167 19.355 12.8628 19.355H12.8585Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<span>Версия для слабовидящих</span>
+				</div>
+				<a href="tel:83022212003" class="footer-phone">
+					<div class="footer-phone__content">
+						<div>
+							<div class="footer-phone__ico">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+									<path d="M18.8178 20.3996L18.8395 20.3649L21 15.9795L14.689 11.2462L11.7852 13.4239C10.6902 13.3587 9.65698 12.8943 8.88128 12.1186C8.10559 11.3429 7.64121 10.3097 7.57606 9.21467L9.75372 6.31098L5.02054 0L0.671841 2.14252L0.635124 2.16055L0.600485 2.18227C0.416258 2.29661 0.26436 2.45619 0.159251 2.64584C0.0541428 2.83548 -0.000677731 3.04887 6.32409e-06 3.26569L6.27463e-06 4.39726C6.17932e-06 6.57757 0.429449 8.73653 1.26382 10.7509C2.09819 12.7652 3.32114 14.5955 4.86285 16.1372C6.40456 17.6789 8.23484 18.9018 10.2492 19.7362C12.2635 20.5706 14.4225 21 16.6028 21H17.7344C17.9512 21.0007 18.1646 20.9459 18.3543 20.8408C18.5439 20.7357 18.7035 20.5838 18.8178 20.3996ZM16.6028 19.3794C8.34158 19.3794 1.62059 12.6584 1.6206 4.39726V3.48163L4.53072 2.04812L7.72809 6.31128L5.94802 8.68478V8.95487C5.94983 10.5715 6.59282 12.1213 7.73593 13.2644C8.87903 14.4075 10.4289 15.0505 12.0455 15.0523H12.3156L14.689 13.2723L18.9519 16.4693L17.5182 19.3794H16.6028Z" fill="white"/>
+								</svg>
+							</div>
+							Приемная:
+						</div>
+						<span>+7 (3022) 212‒003</span>
+					</div>
+				</a>
+				<a href="mailto:priemnaya@zabavtodor.ru" class="footer-email">
+					<div class="footer-email__ico">
+						<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M19.8715 6.3809C20.5831 6.92231 21 7.76457 21 8.65868V18.1364C21 19.7179 19.7179 21 18.1364 21H2.86364C1.2821 21 0 19.7179 0 18.1364V8.65868C0 7.76457 0.416898 6.92231 1.1285 6.3809C3.21433 4.79393 7.57083 1.48097 8.78182 0.572727C9.80003 -0.190909 11.2 -0.190909 12.2182 0.572727C13.4291 1.48096 17.7857 4.79393 19.8715 6.3809ZM1.90909 8.75204L8.7256 14.1335C9.76595 14.9549 11.234 14.9549 12.2744 14.1335L19.0909 8.75204V18.1364C19.0909 18.6636 18.6636 19.0909 18.1364 19.0909H2.86364C2.33646 19.0909 1.90909 18.6636 1.90909 18.1364V8.75204ZM11.0727 2.1L17.9256 7.23968L11.0914 12.635C10.7446 12.9089 10.2553 12.9089 9.90856 12.635L3.07437 7.23968L9.92727 2.1C10.2667 1.84545 10.7333 1.84545 11.0727 2.1Z" fill="white"/>
+						</svg>
+					</div>
+					<span>priemnaya@zabavtodor.ru</span>
+				</a>
+				<div class="footer-address">
+					<div class="footer-address__ico">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+							<path d="M9 0C4.03071 0 0 3.60525 0 8.05C0 14.0875 9 23 9 23C9 23 18 14.0875 18 8.05C18 3.60525 13.9693 0 9 0ZM9 10.925C7.22571 10.925 5.78571 9.637 5.78571 8.05C5.78571 6.463 7.22571 5.175 9 5.175C10.7743 5.175 12.2143 6.463 12.2143 8.05C12.2143 9.637 10.7743 10.925 9 10.925Z" fill="white"/>
+						</svg>
+					</div>
+					<span>672010, г. Чита, ул.Забайкальского Рабочего, д.68</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

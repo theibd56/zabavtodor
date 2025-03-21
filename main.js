@@ -51,58 +51,79 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const fileInput = document.getElementById("fileInput");
-    const fileNameDisplay = document.getElementById("fileName");
+    if (document.getElementById("fileInput")) {
+        const fileInput = document.getElementById("fileInput");
+        const fileNameDisplay = document.getElementById("fileName");
 
-    fileInput.addEventListener("change", function () {
-        if (fileInput.files.length > 0) {
-            const file = fileInput.files[0];
+        fileInput.addEventListener("change", function () {
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
 
-            if (file.size > 5 * 1024 * 1024) {
-                alert("Файл слишком большой! Максимальный размер 5MB.");
-                fileInput.value = "";
+                if (file.size > 5 * 1024 * 1024) {
+                    alert("Файл слишком большой! Максимальный размер 5MB.");
+                    fileInput.value = "";
+                    fileNameDisplay.textContent = "";
+                    return;
+                }
+
+                fileNameDisplay.textContent = file.name;
+            } else {
                 fileNameDisplay.textContent = "";
-                return;
             }
-
-            fileNameDisplay.textContent = file.name;
-        } else {
-            fileNameDisplay.textContent = "";
-        }
-    });
+        });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const menu = document.querySelector('.page-menu');
-    const firstItem = menu.querySelector('li:first-child');
-    const firstLink = firstItem.querySelector('a');
+    if (document.querySelector('.page-menu')) {
+        const menu = document.querySelector('.page-menu');
+        const firstItem = menu.querySelector('li:first-child');
+        const firstLink = firstItem.querySelector('a');
 
-    const originalHref = firstLink.getAttribute('href');
+        const originalHref = firstLink.getAttribute('href');
 
-    function checkWidth() {
-        return window.innerWidth <= 992;
-    }
+        function checkWidth() {
+            return window.innerWidth <= 992;
+        }
 
-    firstItem.addEventListener('click', function(e) {
-        if (checkWidth()) {
-            if (!menu.classList.contains('active')) {
-                e.preventDefault();
+        firstItem.addEventListener('click', function(e) {
+            if (checkWidth()) {
+                if (!menu.classList.contains('active')) {
+                    e.preventDefault();
+                }
+
+                menu.classList.toggle('active');
+
+                if (menu.classList.contains('active')) {
+                    firstLink.setAttribute('href', originalHref);
+                } else {
+                    firstLink.setAttribute('href', 'javascript:void(0)');
+                }
             }
+        });
 
-            menu.classList.toggle('active');
-
-            if (menu.classList.contains('active')) {
+        window.addEventListener('resize', function() {
+            if (!checkWidth()) {
+                menu.classList.remove('active');
                 firstLink.setAttribute('href', originalHref);
-            } else {
-                firstLink.setAttribute('href', 'javascript:void(0)');
             }
-        }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerTrigger = document.getElementById('js-burger-trigger');
+    const burgerMenu = document.getElementById('js-burger-menu');
+    const burgerClose = document.getElementById('js-burger-close');
+    const htmlElement = document.documentElement;
+
+    burgerTrigger.addEventListener('click', () => {
+        burgerMenu.classList.add('active');
+        htmlElement.classList.add('lock');
     });
 
-    window.addEventListener('resize', function() {
-        if (!checkWidth()) {
-            menu.classList.remove('active');
-            firstLink.setAttribute('href', originalHref);
-        }
+    burgerClose.addEventListener('click', () => {
+        burgerMenu.classList.remove('active');
+        htmlElement.classList.remove('lock');
     });
-});
+})
