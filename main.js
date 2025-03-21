@@ -19,13 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function () {
             if (typeof isvek !== "undefined" && typeof isvek.Bvi === "function") {
                 new isvek.Bvi({
-                    target: "body",
-                    theme: "white",
-                    font: "arial",
-                    letterSpacing: "normal",
-                    lineHeight: "normal",
-                    images: true,
-                    reload: false
+                    target: '.eye',
+                    fontSize: 24,
+                    theme: 'white'
                 });
                 console.log("BVI успешно запущен!");
             } else {
