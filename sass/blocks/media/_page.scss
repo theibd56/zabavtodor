@@ -1,0 +1,41 @@
+@media screen and (max-width: 992px) {
+  .page-top {
+    flex-direction: column;
+  }
+  .page-bottom {
+    .page-aside {
+      display: none;
+    }
+  }
+
+  .page-aside {
+    flex: auto;
+    width: 100%;
+  }
+
+  .page-menu li:not(:first-child) {
+    display: none;
+  }
+
+  .page-menu.active li {
+    display: block;
+  }
+
+  .page-menu .sub-menu {
+    display: none;
+  }
+
+  .page-menu.active .sub-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-top {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .page-bottom {
+    margin-bottom: 10px;
+  }
+}
