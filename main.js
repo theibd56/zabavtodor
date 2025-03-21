@@ -6,7 +6,6 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 import * as isvek from "bvi";
 import 'bvi/dist/css/bvi.min.css';
-import Swiper from "swiper";
 
 new MaskInput("[data-maska]")
 
