@@ -40,6 +40,10 @@
   &-slide {
     min-height: 360px;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     &__content {
       padding: 127px 20px;
       position: relative;
@@ -49,7 +53,7 @@
       color: #FFF;
       font-size: 16px;
       font-weight: 700;
-      line-height: 24px; /* 150% */
+      line-height: 150%; /* 150% */
       text-transform: uppercase;
     }
     &__img {

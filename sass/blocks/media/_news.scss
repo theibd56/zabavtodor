@@ -1,0 +1,31 @@
+@media screen and (max-width: 992px) {
+  .news {
+    margin-bottom: 100px;
+    &-list {
+      grid-template: minmax(270px, auto) / repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 768px)  {
+  .news {
+    margin-bottom: 70px;
+    &-heading {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    &-divider {
+      display: none;
+    }
+    &-list {
+      grid-template: minmax(270px, auto) / 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    margin-bottom: 50px;
+  }
+}

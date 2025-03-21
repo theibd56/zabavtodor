@@ -27,6 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
         navigation: {
             prevEl: '.js-resources-slider .prev',
             nextEl: '.js-resources-slider .next'
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+            }
         }
     });
 });

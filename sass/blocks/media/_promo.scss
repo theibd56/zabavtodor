@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+  .promo-slide {
+    min-height: 280px;
+    &__content {
+      font-size: 14px;
+      padding: 60px 20px;
+    }
+  }
+  .promo-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .promo-slide {
+    min-height: 220px;
+    &__content {
+      font-size: 12px;
+      padding: 137px 10px 33px;
+    }
+  }
+  .promo-slider {
+    overflow: visible;
+    .swiper-navigation {
+      bottom: -40px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 15px;
+      div {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
