@@ -4,6 +4,16 @@
     &-list {
       grid-template: minmax(270px, auto) / repeat(2, 1fr);
     }
+    &-content {
+      p, li {
+        font-size: 18px;
+      }
+      a {
+        img {
+          height: 400px;
+        }
+      }
+    }
   }
 }
 
@@ -21,11 +31,43 @@
       grid-template: minmax(270px, auto) / 1fr;
       gap: 20px;
     }
+    &-content {
+      p, li {
+        font-size: 16px;
+      }
+      a {
+        p {
+          font-size: 14px;
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+        img {
+          height: 320px;
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .news {
     margin-bottom: 50px;
+    &-content {
+      p, li {
+        font-size: 14px;
+      }
+      a {
+        p {
+          font-size: 12px;
+          &:last-child {
+            margin-bottom: 10px;
+          }
+        }
+        img {
+          height: 210px;
+        }
+      }
+    }
   }
 }
