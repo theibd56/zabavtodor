@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function () {
             if (typeof isvek !== "undefined" && typeof isvek.Bvi === "function") {
                 new isvek.Bvi({
-                    target: '.eye',
+                    target: '.js-body-bvi',
                     fontSize: 24,
                     theme: 'white'
                 });
